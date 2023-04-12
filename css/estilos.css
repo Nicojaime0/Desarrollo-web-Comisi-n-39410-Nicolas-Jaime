@@ -94,7 +94,8 @@ ol li {
 
 .grid {
     display: grid;
-
+    grid-row: 5px;
+    grid-area: 5px;
 }
 
 /*Flexbox de "contactos"*/
