@@ -1,0 +1,119 @@
+#ofertas{ 
+    color: goldenrod;
+}
+.card{
+    background-color: darkgoldenrod;
+}
+/*HEADER*/
+#header{
+    display: flex;
+    justify-content:space-between;
+    align-content:center;
+}
+
+#header nav{
+    display: flex;
+    justify-content:center;
+    align-content:space-between;
+}
+
+
+/*MARGENES*/
+*{
+    margin: 0;
+    padding: 0;
+    padding-left: 3px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 3px;
+} 
+/*Fuente para h2*/
+.h2 {
+    font-style: oblique;
+    font-size: x-large;
+    text-align: center;
+}
+.card div {
+    font: 700;
+}
+
+/*CONTENIDO MAIN*/
+#banner{
+    font-weight: 600;
+    height: fit-content;
+    background-color: goldenrod;
+    background-size: cover;
+    margin-left: 100px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}   
+
+/*COLOR DE FONDO*/
+body{
+    background-color: darkgoldenrod;
+}
+
+/*IMAGENES*/
+.img{
+    border-image: stretch;
+    width: 200;
+    height: 200;
+}
+
+/*listas*/
+.ol{
+    list-style-type: upper-roman;
+    padding-right: 10px;
+}
+ol li {
+    list-style-type: lower-roman;
+}
+
+/*Fondo de "servicios*/
+.servicios{
+    background-image: url(../img/Imagen\ 1\ para\ servicios.jpg);
+    background-size: cover;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+
+/*Fondo de "productos"*/
+.productos{
+    background-image: url(../img/Imagen\ 2.jpg);
+    background-size: cover;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    margin-block-end: auto;
+}   
+
+.grid {
+    display: grid;
+
+}
+
+/*Flexbox de "contactos"*/
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.grid{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 576px){
+    header{
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+}
