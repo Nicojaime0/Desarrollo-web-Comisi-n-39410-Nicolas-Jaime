@@ -96,10 +96,11 @@ ol li {
     margin-block-end: auto;
 }   
 
-.grid {
+/*Grids de "quienes somos"*/
+.grid-container {
     display: grid;
-    grid-row: 5px;
-    grid-area: 10px;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr;
 }
 
 /*Flexbox de "contactos"*/
@@ -109,6 +110,14 @@ ol li {
     align-items:center;
     flex-wrap: 100px;
 }
+
+/*Flexbox de formulario*/
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 
 .grids{
     grid-template-columns: 300px 100px;
@@ -127,28 +136,55 @@ ol li {
 /*Animaciones*/
 @keyframes animacion {
     0%{
-        width: 100px;
+        height: 500px;
+        width: 500px;
         background-image: url(../img/Animacion\ 1.jpg);
     }
     25%{
-        width: 100px;
+        height: 500px;
+        width: 500px;
         background-image: url(../img/Animacion\ 2.jpg);
     }
     50%{
-        width: 100px;
+        height: 500px;
+        width: 500px;
         background-image: url(../img/Animacion\ 3.jpg);
     }
     100%{
-        width: 100px;
+        height: 500px;
+        width: 500px;
         background-image: url(../img/Animacion\ 4.jpg);
     }
 }
 
 #animacion{
-    width: 100px;
-    height: 100px;
+    display: inline-block;
     animation-name: animacion;
-    animation-iteration-count: 2;
-    animation-duration: 4s;
-    animation-delay: 4s;
+    animation-iteration-count: 20;
+    animation-duration: 15s;
+    animation-delay: 1s;
 }
+
+.quienes-somos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.servicios-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+}
+
+    .servicios-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
