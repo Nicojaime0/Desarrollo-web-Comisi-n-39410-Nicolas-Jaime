@@ -1,0 +1,238 @@
+#ofertas {
+    background: linear-gradient(to bottom, goldenrod, black);
+}
+
+.card {
+    background: linear-gradient(to bottom, goldenrod, black);
+}
+
+/*HEADER*/
+#header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: center;
+    nav {
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+    }
+}
+
+/*MARGENES*/
+  * {
+    margin: 0;
+    padding: 0;
+    padding-left: 3px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 3px;
+}
+
+/*Fuente para h2*/
+.h2 {
+    font-style: oblique;
+    font-size: x-large;
+    text-align: center;
+}
+
+.card div {
+    font-weight: 700;
+}
+
+/*CONTENIDO MAIN*/
+#banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    font-weight: 600;
+    height: fit-content;
+    background-image: linear-gradient(goldenrod, rgb(104, 92, 54));
+    background-size: cover;
+    margin-left: 100px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+}
+
+/*COLOR DE FONDO*/
+body {
+    background-image: linear-gradient(goldenrod, rgb(104, 92, 54));
+}
+
+/*IMAGENES*/
+.img {
+    border-image: stretch;
+    width: 200;
+    height: 200;
+}
+
+/*listas*/
+.ol {
+    list-style-type: upper-roman;
+    padding-right: 10px;
+    li {
+        list-style-type: lower-roman;
+    }
+}
+
+/*Fondo de "servicios*/
+.servicios {
+    background-image: url(../img/Imagen\ 1\ para\ servicios.jpg);
+    background-size: cover;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+
+/*Fondo de "productos"*/
+.productos {
+    background-image: url(../img/Imagen\ 2.jpg);
+    background-size: cover;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    margin-block-end: auto;
+}
+
+/*Grids de "quienes somos"*/
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*Flexbox de "contactos"*/
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: 100px;
+}
+
+/*Flexbox de formulario*/
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grids {
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 40px 100px;
+}
+
+/*Media queries*/
+@media screen and (max-width: 576px) {
+    header {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+}
+
+/* Animaciones */
+@keyframes animacion {
+    0% {
+        height: 500px;
+        width: 500px;
+        background-image: url(../img/Animacion\ 1.jpg);
+    }
+    25% {
+        height: 500px;
+        width: 500px;
+        background-image: url(../img/Animacion\ 2.jpg);
+    }
+    50% {
+        height: 500px;
+        width: 500px;
+        background-image: url(../img/Animacion\ 3.jpg);
+    }
+    100% {
+        height: 500px;
+        width: 500px;
+        background-image: url(../img/Animacion\ 4.jpg);
+    }
+}
+
+#animacion {
+    display: inline-block;
+    animation-name: animacion;
+    animation-iteration-count: 20;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+.quienes-somos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    &.servicios-container {
+        height: 200px;
+        & .servicios-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+$imagen-ancho: 500px;
+$imagen-alto: 500px;
+
+$imagen1: "../img/Animacion\ 1.jpg";
+$imagen2: "../img/Animacion\ 2.jpg";
+$imagen3: "../img/Animacion\ 3.jpg";
+$imagen4: "../img/Animacion\ 4.jpg";
+
+/* Animaciones */
+@keyframes animacion {
+    0% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen1);
+    }
+    25% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen2);
+    }
+    50% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen3);
+    }
+    100% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen4);
+    }
+}
+
+#animacion {
+    display: inline-block;
+    animation-name: animacion;
+    animation-iteration-count: 20;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+/* Los días de oferta se aplica un fondo rojo con cambio de letras */
+$dias-ofertas: false;
+
+@mixin ofertas {
+    color: white;
+    background: linear-gradient(to bottom, red, black);
+}
+
+body {
+@if $dias-ofertas {
+    @include ofertas;
+}
+}
+

@@ -1,0 +1,80 @@
+/*CONTENIDO MAIN*/
+#banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    font-weight: 600;
+    height: fit-content;
+    background-image: linear-gradient(goldenrod, rgb(104, 92, 54));
+    background-size: cover;
+    margin-left: 100px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+}
+
+/*COLOR DE FONDO*/
+body {
+    background-image: linear-gradient(goldenrod, rgb(104, 92, 54));
+}
+
+/*IMAGENES*/
+.img {
+    border-image: stretch;
+    width: 200;
+    height: 200;
+}
+$imagen-ancho: 500px;
+$imagen-alto: 500px;
+
+$imagen1: "../img/Animacion\ 1.jpg";
+$imagen2: "../img/Animacion\ 2.jpg";
+$imagen3: "../img/Animacion\ 3.jpg";
+$imagen4: "../img/Animacion\ 4.jpg";
+
+/* Animaciones */
+@keyframes animacion {
+    0% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen1);
+    }
+    25% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen2);
+    }
+    50% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen3);
+    }
+    100% {
+        height: $imagen-alto;
+        width: $imagen-ancho;
+        background-image: url($imagen4);
+    }
+}
+
+#animacion {
+    display: inline-block;
+    animation-name: animacion;
+    animation-iteration-count: 20;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+/* Los días de oferta se aplica un fondo rojo con cambio de letras */
+$dias-ofertas: false;
+
+@mixin ofertas {
+    color: white;
+    background: linear-gradient(to bottom, red, black);
+}
+
+body {
+    @if $dias-ofertas {
+        @include ofertas;
+    }
+    }
