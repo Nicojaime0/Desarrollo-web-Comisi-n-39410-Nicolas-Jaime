@@ -29,6 +29,10 @@
     padding-right: 3px;
 }
 
+h1 {
+    font-style: italic;
+}
+
 /*Fuente para h2*/
 .h2 {
     font-style: oblique;
@@ -78,18 +82,24 @@ body {
 }
 
 /*Fondo de "servicios*/
-.servicios {
-    background-image: url(../img/Imagen\ 1\ para\ servicios.jpg);
-    background-size: cover;
+#servicios {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    font-weight: 600;
+    height: fit-content;
+    margin-left: 100px;
     padding-left: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 15px;
+    padding-right: 55px;
 }
 
 /*Fondo de "productos"*/
 .productos {
-    background-image: url(../img/Imagen\ 2.jpg);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
     background-size: cover;
     padding-left: 15px;
     padding-top: 20px;
@@ -236,3 +246,39 @@ body {
 }
 }
 
+.carousel{
+    height: 610px;
+    width: 300px;
+}
+
+nav {
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    li {
+        margin: 0 10px;
+        position: relative;
+        a {
+            text-decoration: none;
+            color: #000;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        &:hover:before,
+        &:focus:before {
+            transform: scaleX(1);
+            }
+        }
+        }
+    }
+}

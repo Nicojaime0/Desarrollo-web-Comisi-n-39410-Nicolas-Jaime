@@ -17,10 +17,10 @@
         <div>
         <img src="../img/La pasteria logo.jpg" alt="Logo" height="200" width="200">
         </div>
-        <h1>LA PASTERIA</h1>
+        <h1 style="font-style: italic;">LA PASTERIA</h1>
         <nav class="navbar navbar-expand-lg" style="background-color: goldenrod;">
             <div class="container-fluid">
-            <a class="navbar-brand" href="../Index.html">Inicio</a>
+            <a class="navbar-brand" href="../index.html">Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,47 +46,56 @@
     <main class="contacto">
         <h2 class="h2">Cotiza tu evento</h2>
         <form action="">
-            <div class="card">
-                <label for="Nombre y apellido">Nombre y apellido:</label>
-                <input type="text" value="Nombre y apellido" name="Nombre y apellido">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Nombre y apellido</label>
             </div>
-            <div>
-                <label for="Direccion email">Direccion email</label>
-                <input type="text" value="Direccion email" name="Direccion email">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Dirección de mail</label>
             </div>
-            <div>
-                <label for="Telefono de contacto">Telefono de contacto</label>
-                <input type="Telefono de contacto" value="Telefono de contacto" name="Telefono de contacto">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Telefono de contacto</label>
             </div>
-            <div>
-                <label for="Cantidad de participantes">Cantidad de participantes</label>
-                <input type="Cantidad de participantes" value="Cantidad de participantes"   name="Cantidad de participantes">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Cantidad de participantes</label>
             </div>
-            <div>
+            </div>
                 <h2>Elegi tu opcion favorita</h2>
-                <select name="Opcion elegida">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Elegí tu opcion favorita</option>
                     <option value="1">Opcion 1</option>
                     <option value="2">Opcion 2</option>
                     <option value="3">Opcion 3</option>
-                    <option value="4">Opcion 4</option>
                 </select>
             </div>
             <div>
-                <label for="Dejanos tu comentario">Dejanos tu comentario</label>
+                <strong>
+                    <label for="Dejanos tu comentario">Dejanos tu comentario</label>
+                </strong>
             <div>
             </div>
-                <textarea name="" id="" cols="30" rows="10" ></textarea>
+            <textarea name="" id="" cols="30" rows="10" ></textarea>
             </div>
+        <div>
+            <button type="button" class="btn btn-secondary">Enviar</button>
+        <div>
+            <p><strong><ins>PUEDE COORDINAR TAMBIEN POR NUESTRO WSP</ins></strong></p>
             <div>
-                <input type="button" value="Enviar">
+                <img src="../img/Logo wsp.png" alt="whatsapp" width="75">
+                <strong>
+                    <label for="+351 000 000">+351 XXX XXX</label>
+                </strong>
             </div>
         </form>
     </main>
     <footer>
         <p><strong>BUSCANOS TAMBIEN EN NUESTRAS REDES</strong></p>
-        <img src="../img/Logo instagram.png" alt="instagram" width="25">
+        <img src="../img/Logo instagram.png" alt="instagram" width="35">
             <a href="https://instagram.com/lapasteriacba"></a>
-        <img src="../img/Logo facebook.png" alt="facebook" width="25">
+        <img src="../img/Logo facebook.png" alt="facebook" width="45">
     </footer>
 </body>
 </html>

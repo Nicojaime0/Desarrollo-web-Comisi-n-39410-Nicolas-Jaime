@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="servicios">
-    <header id="header">
+<body id="grids">
+    <header id="header" class="container-fluid">
         <div> 
             <img src="../img/La pasteria logo.jpg" alt="logo" height="200" width="200">
         </div>
-        <h1 class="animate__animated animate__bounce">LA PASTERIA</h1>
-        <nav class="navbar navbar-expand-lg" style="background-color: goldenrod;">
+        <h1 style="font-style: italic;">LA PASTERIA</h1>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(211, 163, 41);">
             <div class="container-fluid">
-            <a class="navbar-brand" href="../Index.html">Inicio</a>
+            <a class="navbar-brand" href="../index.html">Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,27 +35,47 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienessomos.html">Quienes somos</a>
+                </li>
                 </ul>
             </div>
             </div>
         </nav>
     </header>
-    <main>
-        <h2 class="h2"> SERVICIOS</h2>
-        <p>Todos nuestros servicios incluyen:</p>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+            <h2 class="h2"><ins>NUESTROS SERVICIOS</ins></h2>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            <div>
+                <p><strong> Todos nuestros servicios incluyen:</strong></p>
             <ol class="ol">
                 <li>Menu para todos los invitados</li>
                 <li>Bebida libre</li>
                 <li>Vajilla</li>
                 <li>Decoracion del sitio</li>
+                <li><strong>Opcionalmente musicalizamos tu evento!</strong></li>
             </ol>
-            <img src="../img/Imagen 1 para servicios.jpg" alt="Foodtruck"  width="250" class="img">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="../img/Imagen 1 para servicios.jpg" alt="Foodtruck" width="250" class="img">
+            <img src="../img/Menú en servicios.jpg" alt="Sandwich casero" width="250">
+        </div>
+        </div>
+        </div>
     </main>
     <footer>
-        <p><strong>BUSCANOS TAMBIEN EN NUESTRAS REDES</strong></p>
-        <img src="../img/Logo instagram.png" alt="instagram" width="25">
-            <a href="https://instagram.com/lapasteriacba"></a>
-        <img src="../img/Logo facebook.png" alt="facebook" width="25">
+        <div>
+            <p><strong>BUSCANOS TAMBIEN EN NUESTRAS REDES</strong></p>
+            <img src="../img/Logo instagram.png" alt="instagram" width="35">
+                <a href="https://instagram.com/lapasteriacba"></a>
+            <img src="../img/Logo facebook.png" alt="facebook" width="45">
+        </div>
     </footer>
 </body>
 </html>
